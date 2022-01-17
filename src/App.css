@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "titile";
+  src: url(assets/fonts/TitilliumWeb-Regular.ttf);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root {
+  --bg-primary-light: #e5f1fd;
+  --bg-primary-dark: #28223f;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.dark {
+  background-color: var(--bg-primary-dark);
+  --bg-card: #231e39;
+  --text-card-title: #fff;
+  --text-main-card: #e0e0e0;
+  --text-info-card: #ddd;
 }
-
-.App-link {
-  color: #61dafb;
+.light {
+  background-color: var(--bg-primary-light);
+  --bg-card: #fff;
+  --text-card-title: #444;
+  --text-main-card: #565656;
+  --text-info-card: #555;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  margin: 0;
+  font-family: "titile", "Titillium Web", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+}
+.theme-icon {
+  width: 100%;
+  text-align: right;
+  padding: 2rem 3rem 1rem;
+  box-sizing: border-box;
+}
+.theme-icon svg {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  fill: #555;
+}
+.react-loading-skeleton,
+.react-loading-skeleton::after {
+  transition: 0.3s all;
+}
+.dark .react-loading-skeleton {
+  --base-color: #342d52;
+  --highlight-color: #463d6d;
 }
